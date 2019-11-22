@@ -29,7 +29,7 @@ const App: () => React$Node = () => {
   return (
     <ScrollView>
       <View style={styles.body}>
-        <WidgetOne onRelayout={e => console.log({onRelayout: e.nativeEvent})} />
+        <WidgetOne />
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Step One</Text>
           <Text style={styles.sectionDescription}>

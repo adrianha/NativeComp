@@ -42,14 +42,18 @@ public class WidgetOneShadowNode extends LayoutShadowNode implements YogaMeasure
     }
 
     public void relayout(WidgetOne widget) {
-        mMeasured = false;
-        this.widget = widget;
-        dirty();
+        getThemedContext().runOnNativeModulesQueueThread(() -> {
+            this.widget = widget;
+            mMeasured = false;
+            dirty();
+            getThemedContext().getNativeModule(UIManagerModule.class)
+                    .getUIImplementation().dispatchViewUpdates(-1);
+        });
 
-        getThemedContext().getJSModule(RCTEventEmitter.class).receiveEvent(
-            widget.getId(),
-            "relayout",
-                null
-        );
+//        getThemedContext().getJSModule(RCTEventEmitter.class).receiveEvent(
+//            widget.getId(),
+//            "relayout",
+//                null
+//        );
     }
 }
