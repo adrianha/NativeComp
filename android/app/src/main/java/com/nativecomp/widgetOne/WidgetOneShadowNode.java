@@ -64,4 +64,9 @@ public class WidgetOneShadowNode extends LayoutShadowNode implements YogaMeasure
 //                null
 //        );
     }
+
+    @Override
+    public boolean isYogaLeafNode() {
+        return true;
+    }
 }
