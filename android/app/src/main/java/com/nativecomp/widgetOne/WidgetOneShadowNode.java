@@ -42,12 +42,20 @@ public class WidgetOneShadowNode extends LayoutShadowNode implements YogaMeasure
     }
 
     public void relayout(WidgetOne widget) {
+        // Layout updates should be invoked on NativeModulesQueueThread
         getThemedContext().runOnNativeModulesQueueThread(() -> {
             this.widget = widget;
             mMeasured = false;
+
+            // Tell Yoga to remeasure node on next layout phase
             dirty();
-            getThemedContext().getNativeModule(UIManagerModule.class)
-                    .getUIImplementation().dispatchViewUpdates(-1);
+
+            // Trigger re-render; View hierarchy will be updated
+            getThemedContext()
+                .getNativeModule(UIManagerModule.class)
+                .getUIImplementation()
+                .dispatchViewUpdates(-1);
+
         });
 
 //        getThemedContext().getJSModule(RCTEventEmitter.class).receiveEvent(
