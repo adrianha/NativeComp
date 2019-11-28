@@ -20,6 +20,9 @@
 		4E18A8DCDF207114ADF2E264 /* libPods-NativeComp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E7AA37F8EF66ED8DEC8498 /* libPods-NativeComp-tvOSTests.a */; };
 		6F0A9CFD3A72FA91C16D7C2F /* libPods-NativeCompTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E174EC05DA664503DCCB49 /* libPods-NativeCompTests.a */; };
 		B6863900C01020A259D13CCF /* libPods-NativeComp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD4CA435BB2E3C934C4512F /* libPods-NativeComp-tvOS.a */; };
+		DEA99388238D04D20063DDBC /* WidgetOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA99386238D04D20063DDBC /* WidgetOneViewController.m */; };
+		DEA99389238D04D20063DDBC /* WidgetOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA99387238D04D20063DDBC /* WidgetOneViewController.xib */; };
+		DECFCE6F238D1B6600A78208 /* WidgetOneViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DECFCE6E238D1B6600A78208 /* WidgetOneViewManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,11 @@
 		96C6A8A73CBE17775700E096 /* libPods-NativeComp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NativeComp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A707B1E008C9A2FC3CC9EE96 /* Pods-NativeComp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeComp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-NativeComp-tvOSTests/Pods-NativeComp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		B9993DD674678A8EA073B565 /* Pods-NativeCompTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeCompTests.debug.xcconfig"; path = "Target Support Files/Pods-NativeCompTests/Pods-NativeCompTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEA99385238D04D20063DDBC /* WidgetOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WidgetOneViewController.h; sourceTree = "<group>"; };
+		DEA99386238D04D20063DDBC /* WidgetOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WidgetOneViewController.m; sourceTree = "<group>"; };
+		DEA99387238D04D20063DDBC /* WidgetOneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetOneViewController.xib; sourceTree = "<group>"; };
+		DECFCE6D238D1B6600A78208 /* WidgetOneViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WidgetOneViewManager.h; sourceTree = "<group>"; };
+		DECFCE6E238D1B6600A78208 /* WidgetOneViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WidgetOneViewManager.m; sourceTree = "<group>"; };
 		E16BDDBD146176575237E98B /* Pods-NativeComp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeComp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-NativeComp-tvOSTests/Pods-NativeComp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -125,6 +133,7 @@
 		13B07FAE1A68108700A75B9A /* NativeComp */ = {
 			isa = PBXGroup;
 			children = (
+				DEA99382238CF8680063DDBC /* WidgetOne */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -161,7 +170,6 @@
 				B9993DD674678A8EA073B565 /* Pods-NativeCompTests.debug.xcconfig */,
 				F9D66F4231446AA86F766518 /* Pods-NativeCompTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -196,6 +204,18 @@
 				2D02E4901E0B4A5D006451C7 /* NativeComp-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DEA99382238CF8680063DDBC /* WidgetOne */ = {
+			isa = PBXGroup;
+			children = (
+				DEA99385238D04D20063DDBC /* WidgetOneViewController.h */,
+				DEA99386238D04D20063DDBC /* WidgetOneViewController.m */,
+				DEA99387238D04D20063DDBC /* WidgetOneViewController.xib */,
+				DECFCE6D238D1B6600A78208 /* WidgetOneViewManager.h */,
+				DECFCE6E238D1B6600A78208 /* WidgetOneViewManager.m */,
+			);
+			path = WidgetOne;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +328,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -336,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA99389238D04D20063DDBC /* WidgetOneViewController.xib in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -529,7 +551,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				DECFCE6F238D1B6600A78208 /* WidgetOneViewManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				DEA99388238D04D20063DDBC /* WidgetOneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

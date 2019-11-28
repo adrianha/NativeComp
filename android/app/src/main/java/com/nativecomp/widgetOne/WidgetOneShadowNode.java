@@ -1,12 +1,7 @@
 package com.nativecomp.widgetOne;
 
-import android.os.Handler;
-
-import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.bridge.UiThreadUtil;
 import com.facebook.react.uimanager.LayoutShadowNode;
 import com.facebook.react.uimanager.UIManagerModule;
-import com.facebook.react.uimanager.events.RCTEventEmitter;
 import com.facebook.yoga.YogaMeasureFunction;
 import com.facebook.yoga.YogaMeasureMode;
 import com.facebook.yoga.YogaMeasureOutput;
@@ -55,7 +50,6 @@ public class WidgetOneShadowNode extends LayoutShadowNode implements YogaMeasure
                 .getNativeModule(UIManagerModule.class)
                 .getUIImplementation()
                 .dispatchViewUpdates(-1);
-
         });
 
 //        getThemedContext().getJSModule(RCTEventEmitter.class).receiveEvent(

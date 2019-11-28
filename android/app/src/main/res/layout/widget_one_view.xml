@@ -3,28 +3,37 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp"
+    android:padding="16dp"
     android:background="@android:color/holo_orange_dark">
-    <TextView
-        android:id="@+id/txt_title"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="8dp"
-        android:text="Widget One"
-    />
-    <Button
-        android:id="@+id/btn_toggle_view"
+        android:orientation="horizontal"
+    >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View"
+            android:minHeight="24dp"
+            android:background="#96FF96"
+            android:layout_marginRight="8dp"
+        />
+
+        <Button
+            android:id="@+id/btn_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
+            android:minWidth="0dp"
+            android:minHeight="24dp"
+            android:text="Toggle" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text_view_toggled"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:background="@android:color/holo_blue_light"
-        android:text="Toggle View"
-        android:layout_marginVertical="8dp"
-    />
-    <View
-        android:id="@+id/view_toggled"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@android:color/holo_purple"
-        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text="ToggledTextView"
+        android:background="#FF9696"
+        android:visibility="visible"
     />
 </LinearLayout>

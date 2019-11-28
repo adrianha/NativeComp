@@ -1,22 +1,16 @@
 package com.nativecomp.widgetOne;
 
-import android.os.Handler;
-import android.os.Looper;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.common.MapBuilder;
 import com.facebook.react.uimanager.LayoutShadowNode;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ViewGroupManager;
-import com.facebook.yoga.YogaMeasureMode;
 
 import java.util.Map;
 
 public class WidgetOneGroupManager extends ViewGroupManager<WidgetOne> {
-    private ThemedReactContext mReactContext;
     private WidgetOne widget;
     private WidgetOneShadowNode shadowNode;
 
@@ -29,7 +23,6 @@ public class WidgetOneGroupManager extends ViewGroupManager<WidgetOne> {
     @NonNull
     @Override
     protected WidgetOne createViewInstance(@NonNull ThemedReactContext reactContext) {
-        mReactContext = reactContext;
         widget = new WidgetOne(reactContext, this);
         return widget;
     }

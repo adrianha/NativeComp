@@ -1,12 +1,11 @@
 package com.nativecomp.widgetOne;
 
 import android.content.Context;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.nativecomp.R;
 
@@ -14,7 +13,7 @@ public class WidgetOne extends LinearLayout {
     WidgetOneGroupManager manager;
 
     private Button btnToggleView;
-    private View viewToggled;
+    private TextView textViewToggled;
 
     public WidgetOne(Context context, WidgetOneGroupManager widgetOneGroupManager) {
         super(context);
@@ -28,13 +27,13 @@ public class WidgetOne extends LinearLayout {
         View view = inflate(getContext(), R.layout.widget_one_view, null);
         addView(view, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
-        btnToggleView = findViewById(R.id.btn_toggle_view);
-        viewToggled = findViewById(R.id.view_toggled);
+        btnToggleView = findViewById(R.id.btn_toggle);
+        textViewToggled = findViewById(R.id.text_view_toggled);
     }
 
     private void setupListener() {
         btnToggleView.setOnClickListener(view -> {
-            viewToggled.setVisibility(viewToggled.getVisibility() == GONE ? VISIBLE : GONE);
+            textViewToggled.setVisibility(textViewToggled.getVisibility() == GONE ? VISIBLE : GONE);
 
             if (manager != null) {
                 measure(0, 0);
