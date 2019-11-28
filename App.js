@@ -23,14 +23,14 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const WidgetOne = requireNativeComponent('WidgetOne');
+const NativeView = requireNativeComponent('WidgetOne');
 
 const App: () => React$Node = () => {
   return (
     <SafeAreaView style={styles.body}>
       <ScrollView>
         <View style={styles.body}>
-          <WidgetOne />
+          <NativeView />
           <View style={styles.sectionContainer}>
             <Text style={styles.sectionTitle}>Step One</Text>
             <Text style={styles.sectionDescription}>
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     right: 0,
   },
   body: {
-    backgroundColor: '#df4747',
+    backgroundColor: Colors.white,
   },
   sectionContainer: {
     marginTop: 8,
@@ -87,13 +87,13 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
-    color: Colors.white,
+    color: Colors.dark,
   },
   highlight: {
     fontWeight: '700',
   },
   footer: {
-    color: Colors.white,
+    color: Colors.dark,
     fontSize: 12,
     fontWeight: '600',
     padding: 4,

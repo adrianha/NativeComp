@@ -4,36 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp"
-    android:background="@android:color/holo_orange_dark">
-    <LinearLayout
+    android:background="#34C759">
+    <Button
+        android:id="@+id/btn_toggle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-    >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="View"
-            android:minHeight="24dp"
-            android:background="#96FF96"
-            android:layout_marginRight="8dp"
-        />
-
-        <Button
-            android:id="@+id/btn_toggle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_blue_bright"
-            android:minWidth="0dp"
-            android:minHeight="24dp"
-            android:text="Toggle" />
-    </LinearLayout>
+        android:background="#5AC8FA"
+        android:text="Toggle"
+        android:textColor="@android:color/white"
+    />
     <TextView
         android:id="@+id/text_view_toggled"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:text="ToggledTextView"
-        android:background="#FF9696"
-        android:visibility="visible"
+        android:background="#FFCC00"
+        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:gravity="center"
     />
 </LinearLayout>
