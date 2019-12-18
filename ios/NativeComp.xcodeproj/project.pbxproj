@@ -20,6 +20,14 @@
 		4E18A8DCDF207114ADF2E264 /* libPods-NativeComp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E7AA37F8EF66ED8DEC8498 /* libPods-NativeComp-tvOSTests.a */; };
 		6F0A9CFD3A72FA91C16D7C2F /* libPods-NativeCompTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E174EC05DA664503DCCB49 /* libPods-NativeCompTests.a */; };
 		B6863900C01020A259D13CCF /* libPods-NativeComp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD4CA435BB2E3C934C4512F /* libPods-NativeComp-tvOS.a */; };
+		DE40903B23A757AF00FA55A5 /* RCTWrapperShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE40903A23A757AF00FA55A5 /* RCTWrapperShadowView.m */; };
+		DE40903E23A757DA00FA55A5 /* RCTWrapperView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE40903D23A757DA00FA55A5 /* RCTWrapperView.m */; };
+		DE40904123A757F700FA55A5 /* RCTWrapperViewControllerHostingView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE40904023A757F700FA55A5 /* RCTWrapperViewControllerHostingView.m */; };
+		DE40904423A7581300FA55A5 /* RCTWrapperViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE40904323A7581300FA55A5 /* RCTWrapperViewManager.m */; };
+		DE40904823A7586400FA55A5 /* RCTWrapperExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE40904723A7586400FA55A5 /* RCTWrapperExampleView.m */; };
+		DE40904B23A7587C00FA55A5 /* RCTWrapperExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE40904A23A7587C00FA55A5 /* RCTWrapperExampleViewController.m */; };
+		DE40904E23A7589C00FA55A5 /* RCTWrapperReactRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE40904D23A7589C00FA55A5 /* RCTWrapperReactRootViewController.m */; };
+		DE40905123A758CD00FA55A5 /* RCTWrapperReactRootViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE40905023A758CD00FA55A5 /* RCTWrapperReactRootViewManager.m */; };
 		DEA99388238D04D20063DDBC /* WidgetOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA99386238D04D20063DDBC /* WidgetOneViewController.m */; };
 		DEA99389238D04D20063DDBC /* WidgetOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA99387238D04D20063DDBC /* WidgetOneViewController.xib */; };
 		DECFCE6F238D1B6600A78208 /* WidgetOneViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DECFCE6E238D1B6600A78208 /* WidgetOneViewManager.m */; };
@@ -65,6 +73,23 @@
 		96C6A8A73CBE17775700E096 /* libPods-NativeComp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NativeComp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A707B1E008C9A2FC3CC9EE96 /* Pods-NativeComp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeComp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-NativeComp-tvOSTests/Pods-NativeComp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		B9993DD674678A8EA073B565 /* Pods-NativeCompTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeCompTests.debug.xcconfig"; path = "Target Support Files/Pods-NativeCompTests/Pods-NativeCompTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE40903823A7577300FA55A5 /* RCTWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTWrapper.h; sourceTree = "<group>"; };
+		DE40903923A757AF00FA55A5 /* RCTWrapperShadowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTWrapperShadowView.h; sourceTree = "<group>"; };
+		DE40903A23A757AF00FA55A5 /* RCTWrapperShadowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTWrapperShadowView.m; sourceTree = "<group>"; };
+		DE40903C23A757DA00FA55A5 /* RCTWrapperView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTWrapperView.h; sourceTree = "<group>"; };
+		DE40903D23A757DA00FA55A5 /* RCTWrapperView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTWrapperView.m; sourceTree = "<group>"; };
+		DE40903F23A757F700FA55A5 /* RCTWrapperViewControllerHostingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTWrapperViewControllerHostingView.h; sourceTree = "<group>"; };
+		DE40904023A757F700FA55A5 /* RCTWrapperViewControllerHostingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTWrapperViewControllerHostingView.m; sourceTree = "<group>"; };
+		DE40904223A7581300FA55A5 /* RCTWrapperViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTWrapperViewManager.h; sourceTree = "<group>"; };
+		DE40904323A7581300FA55A5 /* RCTWrapperViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTWrapperViewManager.m; sourceTree = "<group>"; };
+		DE40904623A7586400FA55A5 /* RCTWrapperExampleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTWrapperExampleView.h; sourceTree = "<group>"; };
+		DE40904723A7586400FA55A5 /* RCTWrapperExampleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTWrapperExampleView.m; sourceTree = "<group>"; };
+		DE40904923A7587C00FA55A5 /* RCTWrapperExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTWrapperExampleViewController.h; sourceTree = "<group>"; };
+		DE40904A23A7587C00FA55A5 /* RCTWrapperExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTWrapperExampleViewController.m; sourceTree = "<group>"; };
+		DE40904C23A7589C00FA55A5 /* RCTWrapperReactRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTWrapperReactRootViewController.h; sourceTree = "<group>"; };
+		DE40904D23A7589C00FA55A5 /* RCTWrapperReactRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTWrapperReactRootViewController.m; sourceTree = "<group>"; };
+		DE40904F23A758CD00FA55A5 /* RCTWrapperReactRootViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTWrapperReactRootViewManager.h; sourceTree = "<group>"; };
+		DE40905023A758CD00FA55A5 /* RCTWrapperReactRootViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTWrapperReactRootViewManager.m; sourceTree = "<group>"; };
 		DEA99385238D04D20063DDBC /* WidgetOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WidgetOneViewController.h; sourceTree = "<group>"; };
 		DEA99386238D04D20063DDBC /* WidgetOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WidgetOneViewController.m; sourceTree = "<group>"; };
 		DEA99387238D04D20063DDBC /* WidgetOneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetOneViewController.xib; sourceTree = "<group>"; };
@@ -133,6 +158,7 @@
 		13B07FAE1A68108700A75B9A /* NativeComp */ = {
 			isa = PBXGroup;
 			children = (
+				DE40903723A7573600FA55A5 /* Wrapper */,
 				DEA99382238CF8680063DDBC /* WidgetOne */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -204,6 +230,38 @@
 				2D02E4901E0B4A5D006451C7 /* NativeComp-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DE40903723A7573600FA55A5 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				DE40904523A7585900FA55A5 /* Example */,
+				DE40903823A7577300FA55A5 /* RCTWrapper.h */,
+				DE40903923A757AF00FA55A5 /* RCTWrapperShadowView.h */,
+				DE40903A23A757AF00FA55A5 /* RCTWrapperShadowView.m */,
+				DE40903C23A757DA00FA55A5 /* RCTWrapperView.h */,
+				DE40903D23A757DA00FA55A5 /* RCTWrapperView.m */,
+				DE40903F23A757F700FA55A5 /* RCTWrapperViewControllerHostingView.h */,
+				DE40904023A757F700FA55A5 /* RCTWrapperViewControllerHostingView.m */,
+				DE40904223A7581300FA55A5 /* RCTWrapperViewManager.h */,
+				DE40904323A7581300FA55A5 /* RCTWrapperViewManager.m */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		DE40904523A7585900FA55A5 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				DE40904623A7586400FA55A5 /* RCTWrapperExampleView.h */,
+				DE40904723A7586400FA55A5 /* RCTWrapperExampleView.m */,
+				DE40904923A7587C00FA55A5 /* RCTWrapperExampleViewController.h */,
+				DE40904A23A7587C00FA55A5 /* RCTWrapperExampleViewController.m */,
+				DE40904C23A7589C00FA55A5 /* RCTWrapperReactRootViewController.h */,
+				DE40904D23A7589C00FA55A5 /* RCTWrapperReactRootViewController.m */,
+				DE40904F23A758CD00FA55A5 /* RCTWrapperReactRootViewManager.h */,
+				DE40905023A758CD00FA55A5 /* RCTWrapperReactRootViewManager.m */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 		DEA99382238CF8680063DDBC /* WidgetOne */ = {
@@ -551,9 +609,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				DE40903B23A757AF00FA55A5 /* RCTWrapperShadowView.m in Sources */,
+				DE40904423A7581300FA55A5 /* RCTWrapperViewManager.m in Sources */,
+				DE40904E23A7589C00FA55A5 /* RCTWrapperReactRootViewController.m in Sources */,
+				DE40905123A758CD00FA55A5 /* RCTWrapperReactRootViewManager.m in Sources */,
+				DE40904123A757F700FA55A5 /* RCTWrapperViewControllerHostingView.m in Sources */,
+				DE40904823A7586400FA55A5 /* RCTWrapperExampleView.m in Sources */,
+				DE40903E23A757DA00FA55A5 /* RCTWrapperView.m in Sources */,
 				DECFCE6F238D1B6600A78208 /* WidgetOneViewManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				DEA99388238D04D20063DDBC /* WidgetOneViewController.m in Sources */,
+				DE40904B23A7587C00FA55A5 /* RCTWrapperExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
