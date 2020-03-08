@@ -1,5 +1,7 @@
 package com.nativecomp.widgetOne;
 
+import android.view.View;
+
 import com.facebook.react.uimanager.LayoutShadowNode;
 import com.facebook.react.uimanager.UIManagerModule;
 import com.facebook.yoga.YogaMeasureFunction;
@@ -11,7 +13,6 @@ public class WidgetOneShadowNode extends LayoutShadowNode implements YogaMeasure
     private boolean mMeasured = false;
     private int mWidth;
     private int mHeight;
-    private WidgetOne widget;
 
     public WidgetOneShadowNode() {
         setMeasureFunction(this);
@@ -22,41 +23,35 @@ public class WidgetOneShadowNode extends LayoutShadowNode implements YogaMeasure
         if (!mMeasured) {
             mMeasured = true;
 
-            if (widget != null) {
-                mWidth = widget.getMeasuredWidth();
-                mHeight = widget.getMeasuredHeight();
-            } else {
-                WidgetOne v = new WidgetOne(getThemedContext(), null);
-                v.measure(0, 0);
-                mWidth = v.getMeasuredWidth();
-                mHeight = v.getMeasuredHeight();
-            }
+            WidgetOne dummyWidget = new WidgetOne(getThemedContext(), null);
+            dummyWidget.measure(0, 0);
+            mWidth = dummyWidget.getMeasuredWidth();
+            mHeight = dummyWidget.getMeasuredHeight();
         }
 
         return YogaMeasureOutput.make(mWidth, mHeight);
     }
 
-    public void relayout(WidgetOne widget) {
-        // Layout updates should be invoked on NativeModulesQueueThread
-        getThemedContext().runOnNativeModulesQueueThread(() -> {
-            this.widget = widget;
-            mMeasured = false;
+    public void relayout() {
+        // make sure measure function called first before relayout
+        if (!mMeasured) return;
 
-            // Tell Yoga to remeasure node on next layout phase
-            dirty();
+        getThemedContext().runOnUiQueueThread(() -> {
+            View widget = getThemedContext()
+                            .getNativeModule(UIManagerModule.class)
+                            .resolveView(getReactTag());
 
-            // Trigger re-render; View hierarchy will be updated
-            getThemedContext()
+            int widthSpec = View.MeasureSpec.makeMeasureSpec(getScreenWidth(), View.MeasureSpec.EXACTLY);
+            int heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+            widget.measure(widthSpec, heightSpec);
+
+            mWidth = widget.getMeasuredWidth();
+            mHeight = widget.getMeasuredHeight();
+
+            getThemedContext().runOnNativeModulesQueueThread(() -> getThemedContext()
                 .getNativeModule(UIManagerModule.class)
-                .getUIImplementation()
-                .dispatchViewUpdates(-1);
+                .invalidateNodeLayout(getReactTag()));
         });
-
-//        getThemedContext().getJSModule(RCTEventEmitter.class).receiveEvent(
-//            widget.getId(),
-//            "relayout",
-//                null
-//        );
     }
 
     @Override

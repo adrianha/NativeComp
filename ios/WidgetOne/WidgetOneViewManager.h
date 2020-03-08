@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WidgetOneViewManager : RCTViewManager
 
-- (void) setIntrinsicContentSize:(CGSize)size;
+- (void)setSizeForView:(UIView *)view size:(CGSize)size;
 
 @end
 

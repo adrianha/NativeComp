@@ -36,8 +36,7 @@ public class WidgetOne extends LinearLayout {
             textViewToggled.setVisibility(textViewToggled.getVisibility() == GONE ? VISIBLE : GONE);
 
             if (manager != null) {
-                measure(0, 0);
-                manager.relayout();
+                manager.relayout(this);
             }
         });
     }

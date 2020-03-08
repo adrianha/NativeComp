@@ -23,16 +23,16 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-// const NativeView = requireNativeComponent('WidgetOne');
-const Example = requireNativeComponent('RCTWrapperExampleView');
+const NativeView = requireNativeComponent('WidgetOne');
+// const Example = requireNativeComponent('RCTWrapperExampleView');
 
 const App: () => React$Node = () => {
   return (
     <SafeAreaView style={styles.body}>
       <ScrollView>
         <View style={styles.body}>
-          {/* <NativeView /> */}
-          <Example />
+          <NativeView />
+          {/* <Example /> */}
           <View style={styles.sectionContainer}>
             <Text style={styles.sectionTitle}>Step One</Text>
             <Text style={styles.sectionDescription}>

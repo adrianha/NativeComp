@@ -33,17 +33,16 @@
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
 
-  [_vm setIntrinsicContentSize:self.view.bounds.size];
+  [_vm setSizeForView:self.view size:self.view.bounds.size];
 }
 
 - (IBAction)onToggle:(UIButton *)sender {
   BOOL shouldShow = _toggledLabel.isHidden;
   [_toggledLabel setHidden:!shouldShow];
 
-  [self.view setNeedsLayout];
   [self.view layoutIfNeeded];
 
-  [_vm setIntrinsicContentSize:self.view.bounds.size];
+  [_vm setSizeForView:self.view size:self.view.bounds.size];
 }
 
 @end

@@ -8,38 +8,37 @@
 
 #import "WidgetOneViewManager.h"
 #import "WidgetOneViewController.h"
-#import <React/RCTShadowView.h>
 #import <React/RCTUIManager.h>
 
 @interface WidgetOneViewManager ()
-@property (strong, nonatomic) WidgetOneViewController *widgetVC;
-@property (strong, nonatomic) RCTShadowView *shadowView;
+@property (strong, nonatomic) NSMutableDictionary *widgetDict;
 @end
 
 @implementation WidgetOneViewManager
 
 RCT_EXPORT_MODULE(WidgetOne)
 
-- (UIView *)view {
-  _widgetVC = [[WidgetOneViewController alloc] initWithVM: self];
-
-  return _widgetVC.view;
+- (NSMutableDictionary *)widgetDict {
+  if (!_widgetDict) {
+    _widgetDict = [NSMutableDictionary new];
+  }
+  
+  return _widgetDict;
 }
 
-- (RCTShadowView *)shadowView {
-  _shadowView = [super shadowView];
-  
-  return _shadowView;
+- (UIView *)view {
+  WidgetOneViewController *widget = [[WidgetOneViewController alloc] initWithVM: self];
+  [self.widgetDict setValue:widget forKey:widget.description];
+
+  return widget.view;
 }
 
 + (BOOL)requiresMainQueueSetup {
   return NO;
 }
 
-- (void)setIntrinsicContentSize:(CGSize)size {
-  NSNumber *reactTag = _shadowView.reactTag;
-  UIView *view = [self.bridge.uiManager viewForReactTag:reactTag];
-  [self.bridge.uiManager setIntrinsicContentSize:size forView:view];
+- (void)setSizeForView:(UIView *)view size:(CGSize)size {
+  [self.bridge.uiManager setSize:size forView:view];
 }
 
 - (dispatch_queue_t)methodQueue {
